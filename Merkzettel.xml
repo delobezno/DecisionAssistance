@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form name="Merkzettel" language="1.33" autostart="Yes" treeExpand="10" splitbarPos="" printer="Standard" printcount="1" pdf-language="de">
+<MetaList>
+<Meta name="fml_ursprungsformular" value="Merkzettel_App" />
+<Meta name="fml_datumaenderung_persoenlich" value="05.07.2017 11:45:47" />
+<Meta name="nur_in_aus_suchen" value="n" />
+<Meta name="fml_tsversion_erstellung" value="1610.2" />
+<Meta name="sofort_ersten_treffer_ang" value="n" />
+<Meta name="ab_dem_release_suchen" value="n" />
+<Meta name="fml_anzeigename" value="Merkzettel_App" />
+<Meta name="gpe_autoraenderung" value="1" />
+<Meta name="fml_toplevel" value="n" />
+<Meta name="fml_speicherort" value="BT-FORMULAR-PERSON" />
+<Meta name="fml_dateiname" value="Merkzettel_App" />
+<Meta name="fml_alsmodulverwendbar" value="j" />
+<Meta name="lgk_key_id" value="3" />
+<Meta name="gpe_autorerstellung" value="1" />
+<Meta name="grt_key_id" value="1" />
+<Meta name="fml_inaktiv" value="n" />
+<Meta name="srs_kurzbeschreibung" value="Merkzettel" />
+<Meta name="fml_kurzname" value="Merkzettel" />
+<Meta name="fml_datumfreigabe" value="05.07.17" />
+<Meta name="fml_datumaenderung" value="12.07.17" />
+<Meta name="fml_datumimport_xml" value="12.04.2019 15:06" />
+<Meta name="vlt_key_id" value="1" />
+<Meta name="fml_send_package_name" value="" />
+<Meta name="fml_tsversion" value="1820.1" />
+<Meta name="fml_tsversion_compatibility" value="1730.0" />
+</MetaList>
+<VariableDefList>
+<VD type="Container" name="c_Original" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Container" name="c_Temp">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Maske" pm="Yes">
+<ID></ID>
+<DV>Maske</DV>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Eingabe">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Relevanz" pm="Yes" final="Yes">
+<ID></ID>
+<DV></DV>
+<DV>erwähnenswert</DV>
+<DV>wichtig</DV>
+<DV>sehr wichtig</DV>
+<DV>unentbehrlich</DV>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Auswahl">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="shl_Zeilenwertetabelle" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Spaltennamen" pm="Yes" final="Yes">
+<ID></ID>
+<DV>col_Listeneintrag</DV>
+<DV>col_Relevanz</DV>
+<DV>col_Zeilenloeschung</DV>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Loeschung">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="shl_Temp">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Hilf">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Werteliste">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Nummer">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Position">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Listeneintraege" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Relevanzauswahl" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Zeilenloeschung" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Interpretation">
+<ID></ID>
+<DV>1</DV>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="Bool" name="b_Schalter">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="Bool" name="bl_Zeilenloeschung" pm="Yes">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Schalter">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_i">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Text">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Position">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Sortiert1">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Sortiert2">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Sortiert3">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Sortiert4">
+<ID></ID>
+<DN></DN>
+</VD>
+</VariableDefList>
+<ST>
+<Label des="Formularbezogene Daten" sl="No" ov="No">
+<Label des="Vorbelegung des Inputs" sl="No" ov="No">
+<If>
+<CON>
+<EX>n_Interpretation == 1</EX>
+</CON>
+<Then>
+<Call name="Sys::SetActive" des="" ov="No" preLoad="No">
+<EX>"Eingabe"</EX>
+<EX>True</EX>
+</Call>
+<Call name="M_INPUT_GridDefinierenVorher_I5163" des="" ov="No">
+<EX>c_Original</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>sl_Spaltennamen</EX>
+</Call>
+<Call name="M_INPUT_WerteListeSetzenVorher_I4580" des="" ov="No" preLoad="No">
+<EX>c_Original</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>sl_Listeneintraege</EX>
+<EX>"col_Listeneintrag"</EX>
+</Call>
+<Call name="M_INPUT_WerteListeSetzenVorher_I4580" des="" ov="No" preLoad="No">
+<EX>c_Original</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>sl_Relevanzauswahl</EX>
+<EX>"col_Relevanz"</EX>
+</Call>
+<Call name="M_INPUT_WerteListeSetzenVorher_I4580" des="" ov="No" preLoad="No">
+<EX>c_Original</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>sl_Zeilenloeschung</EX>
+<EX>"col_Zeilenloeschung"</EX>
+</Call>
+</Then>
+</If>
+</Label>
+<Label id="Eingabe" des="erweiterter Input" sl="No" op="Yes" ov="No">
+<ExtendedInput ddes="Merkzettel" ac="Formular" fontScaling="Yes" loadInitialData="Yes">
+<DialogStructure width="600mm" height="300mm">
+<TabbedPane title="">
+<Panel id="pnl_Eingabe" gridX="0" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<TextFieldControl id="txt_Eingabe" gridX="1" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="Listeneintrag eingeben" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="375mm" ipadY="8mm" nextFocusableComponent="cbo_Relevanz" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0" />
+<ComboBoxControl id="cbo_Relevanz" gridX="2" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="Relevanz auswählen" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="120mm" ipadY="4mm" nextFocusableComponent="btn_hinzufuegen" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0" />
+<ButtonControl id="btn_hinzufuegen" gridX="3" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHEAST" fill="NONE" toolTipText="Listeneintrag hinzufügen" insetTop="0mm" insetLeft="3mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="2mm" nextFocusableComponent="clc_Listeneintraege" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="Yes" font-italic="No" font-size="8" font-name="Arial Black" text="+">
+<OnClickListener name="OnClick" resultType="Void">
+<ParamDefList>
+<ParamDef type="Container" name="event" isRef="Yes" />
+</ParamDefList>
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"txt_Eingabe"</EX>
+</Call>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Relevanz"</EX>
+</Call>
+<AS>
+<VN name="s_Eingabe" />
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "txt_Eingabe")</EX>
+</AS>
+<AS>
+<VN name="s_Auswahl" />
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "cbo_Relevanz")</EX>
+</AS>
+<If>
+<CON>
+<EX>(Sys::HasValue(s_Eingabe) &amp;&amp; s_Eingabe != "") &amp;&amp; (Sys::HasValue(s_Auswahl) &amp;&amp; s_Auswahl != "")</EX>
+</CON>
+<Then>
+<AS>
+<VN name="b_Schalter" />
+<EX>False</EX>
+</AS>
+<AS>
+<VN name="s_Schalter" />
+<EX>(String)b_Schalter</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Listeneintraege</EX>
+<EX>s_Eingabe</EX>
+</Call>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Relevanzauswahl</EX>
+<EX>s_Auswahl</EX>
+</Call>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>bl_Zeilenloeschung</EX>
+<EX>b_Schalter</EX>
+</Call>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Zeilenloeschung</EX>
+<EX>s_Schalter</EX>
+</Call>
+<Call name="Sys::HashListSet" des="" ov="No" preLoad="No">
+<EX>shl_Zeilenwertetabelle</EX>
+<EX>"col_Listeneintrag"</EX>
+<EX>s_Eingabe</EX>
+</Call>
+<Call name="Sys::HashListSet" des="" ov="No" preLoad="No">
+<EX>shl_Zeilenwertetabelle</EX>
+<EX>"col_Relevanz"</EX>
+<EX>s_Auswahl</EX>
+</Call>
+<Call name="Sys::HashListSet" des="" ov="No" preLoad="No">
+<EX>shl_Zeilenwertetabelle</EX>
+<EX>"col_Zeilenloeschung"</EX>
+<EX>s_Schalter</EX>
+</Call>
+<Call name="M_INPUT_WerteZeileAnfuegen_I4591" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>shl_Zeilenwertetabelle</EX>
+<EX>0</EX>
+<EX>False</EX>
+</Call>
+<Call name="Sys::InputClearControl" des="" ov="No" preLoad="No">
+<EX>"txt_Eingabe"</EX>
+<EX>True</EX>
+</Call>
+<Call name="Sys::InputClearControl" des="" ov="No" preLoad="No">
+<EX>"cbo_Relevanz"</EX>
+<EX>True</EX>
+</Call>
+</Then>
+<ElseIf>
+<CON>
+<EX>(!Sys::HasValue(s_Eingabe) || s_Eingabe == "") &amp;&amp; (Sys::HasValue(s_Auswahl) &amp;&amp; s_Auswahl != "")</EX>
+</CON>
+<Call name="Sys::MessageBox" des="" ov="No" preLoad="No">
+<EX>3</EX>
+<EX>"Es fehlt die Texteingabe."</EX>
+</Call>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"txt_Eingabe"</EX>
+</Call>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>(Sys::HasValue(s_Eingabe) &amp;&amp; s_Eingabe != "") &amp;&amp; (!Sys::HasValue(s_Auswahl) || s_Auswahl == "")</EX>
+</CON>
+<Call name="Sys::MessageBox" des="" ov="No" preLoad="No">
+<EX>3</EX>
+<EX>"Wie wichtig ist dir dieser Listeneintrag?"</EX>
+</Call>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"cbo_Relevanz"</EX>
+</Call>
+</ElseIf>
+<Else>
+<Call name="Sys::MessageBox" des="" ov="No" preLoad="No">
+<EX>3</EX>
+<EX>"Es wurde weder eine Texteingabe noch eine Auswahl vorgenommen."</EX>
+</Call>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"txt_Eingabe"</EX>
+</Call>
+</Else>
+</If>
+</ST>
+</OnClickListener>
+</ButtonControl>
+<BorderControl title="" justification="DEFAULT_JUSTIFICATION" titlePosition="DEFAULT_POSITION" color="#0" thickness="0" borderstyle="titled" />
+</Panel>
+<Panel id="pnl_Ausgabe" gridX="0" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="BOTH" toolTipText="" insetTop="45mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<CheckListControl id="clc_Listeneintraege" gridX="0" gridY="0" gridWidth="0" gridHeight="0" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="BOTH" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="btn_Speichern" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" selectFirstRow="No" hideFirstCol="Yes">
+<ColumnControl id="col_Listeneintrag" columnName="Listeneintrag" width="350mm" minWidth="300mm" maxWidth="400mm" />
+<ColumnControl id="col_Relevanz" columnName="Relevanz" width="150mm" minWidth="100mm" maxWidth="200mm" />
+<ColumnControl id="col_Zeilenloeschung" columnName="Löschen" width="68mm" minWidth="65mm" maxWidth="70mm" class="Boolean">
+<ChangeListener name="OnChange" resultType="Void">
+<ST>
+<Call name="M_INPUT_ColumnWertMerken_I5171" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>"col_Zeilenloeschung"</EX>
+<EX>"Ja"</EX>
+<EX>"Nein"</EX>
+</Call>
+<AS>
+<VN name="s_Hilf" />
+<EX>Sys::ContainerToString(c_Temp)</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::StringFind(s_Hilf, "Ja", 1)</EX>
+</AS>
+<If>
+<CON>
+<EX>n_Nummer &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_Hilf" />
+<EX>M_ALLG_JaNein_I5027("Zeilenwerte entfernen", "Wollen Sie den Eintrag wirklich entfernen?", "Ja")</EX>
+</AS>
+<If>
+<CON>
+<EX>s_Hilf == "Ja"</EX>
+</CON>
+<Then>
+<Label des="Zeile löschen" sl="No" ov="No">
+<AS>
+<VN name="sl_Werteliste" />
+<EX>M_INPUT_WerteListeHolen_I4576(c_Temp, s_Maske, "clc_Listeneintraege", "col_Zeilenloeschung")</EX>
+</AS>
+<If>
+<CON>
+<EX>Sys::ListLength(sl_Werteliste) &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Position" />
+<EX>Sys::ListFind(sl_Werteliste, "Ja", 1)</EX>
+</AS>
+<Call name="M_INPUT_WerteZeileLoeschen_I4593" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"clc_Listeneintraege"</EX>
+<EX>n_Position</EX>
+</Call>
+<Call name="Sys::ListRemove" des="" ov="No" preLoad="No">
+<EX>sl_Listeneintraege</EX>
+<EX>n_Position</EX>
+</Call>
+<Call name="Sys::ListRemove" des="" ov="No" preLoad="No">
+<EX>sl_Relevanzauswahl</EX>
+<EX>n_Position</EX>
+</Call>
+<Call name="Sys::ListRemove" des="" ov="No" preLoad="No">
+<EX>bl_Zeilenloeschung</EX>
+<EX>n_Position</EX>
+</Call>
+<Call name="Sys::ListRemove" des="" ov="No" preLoad="No">
+<EX>sl_Zeilenloeschung</EX>
+<EX>n_Position</EX>
+</Call>
+</Then>
+</If>
+</Label>
+<Label des="Fokus" sl="No" ov="No">
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"clc_Listeneintraege"</EX>
+</Call>
+</Label>
+</Then>
+<Else>
+<Call name="Sys::ClearValue" des="" ov="No" preLoad="No">
+<EX>sl_Werteliste</EX>
+</Call>
+</Else>
+</If>
+</Then>
+</If>
+</ST>
+</ChangeListener>
+</ColumnControl>
+</CheckListControl>
+<BorderControl title="" justification="DEFAULT_JUSTIFICATION" titlePosition="DEFAULT_POSITION" color="#0" thickness="0" borderstyle="titled" />
+</Panel>
+</TabbedPane>
+<SystemPanel id="pnlSys" gridX="0" gridY="0" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<Panel id="" gridX="0" gridY="1" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<ButtonControl id="btn_Speichern" gridX="0" gridY="1" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="Merkliste kurzfristig abspeichern und Programm beenden" insetTop="0mm" insetLeft="0mm" insetBottom="5mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="btn_Abbrechen" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Speichern und Schliessen" mnemonic="m">
+<OnClickListener name="OnClick" resultType="Void">
+<ParamDefList>
+<ParamDef type="Container" name="event" isRef="Yes" />
+</ParamDefList>
+<ST>
+<If>
+<CON>
+<EX>Sys::InputClose(3) == True</EX>
+</CON>
+<Then>
+<Call name="M_INPUT_OK2_I4597" des="" ov="No" preLoad="No">
+<EX>c_Original</EX>
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+</Call>
+</Then>
+</If>
+</ST>
+</OnClickListener>
+</ButtonControl>
+<ButtonControl id="btn_Abbrechen" gridX="1" gridY="1" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="Programm vorzeitig beenden" insetTop="0mm" insetLeft="5mm" insetBottom="5mm" insetRight="5mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Abbrechen" mnemonic="a">
+<OnClickListener name="OnClick" resultType="Void">
+<ParamDefList>
+<ParamDef type="Container" name="event" isRef="Yes" />
+</ParamDefList>
+<ST>
+<Call name="M_INPUT_Schliessen_I4600" des="" ov="No" preLoad="No">
+<EX>c_Original</EX>
+<EX>c_Temp</EX>
+</Call>
+</ST>
+</OnClickListener>
+</ButtonControl>
+</Panel>
+</SystemPanel>
+</DialogStructure>
+<OnActivationListener name="OnActivation" resultType="Void">
+<ST>
+<If>
+<CON>
+<EX>M_INPUT_MaskeFuellen_I4578(c_Original, c_Temp,  s_Maske) == False</EX>
+</CON>
+<Then>
+<C>
+<CT>ComboBox mit dem Inhalt der Auswahlliste befüllen</CT>
+</C>
+<Call name="M_INPUT_WerteListeSetzen_I4572" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Relevanz"</EX>
+<EX>sl_Relevanz</EX>
+</Call>
+</Then>
+<Else>
+<C>
+<CT>ComboBox mit dem Inhalt der Auswahlliste befüllen</CT>
+</C>
+<Call name="M_INPUT_WerteListeSetzen_I4572" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Relevanz"</EX>
+<EX>sl_Relevanz</EX>
+</Call>
+</Else>
+</If>
+</ST>
+</OnActivationListener>
+<CanCloseListener name="CanClose" resultType="Void">
+<ST>
+<If>
+<CON>
+<EX>Sys::HashListLength(shl_Zeilenwertetabelle, "col_Listeneintrag") &lt; 1</EX>
+</CON>
+<Then>
+<Return>
+<EX>"Ihre Merkliste ist leer. Wenn Sie das Programm beenden wollen, ohne abzuspeichern, gehen Sie auf Abbrechen."</EX>
+</Return>
+</Then>
+</If>
+</ST>
+</CanCloseListener>
+</ExtendedInput>
+<Call name="Sys::SetActive" des="" ov="No" preLoad="No">
+<EX>"Eingabe"</EX>
+<EX>False</EX>
+</Call>
+</Label>
+<Label id="Ausgabe" des="Merkzettel" sl="No" ov="No">
+<AS>
+<VN name="n_i" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::ListLength(sl_Listeneintraege)</EX>
+</AS>
+<C>
+<CT>Sammeln</CT>
+</C>
+<While>
+<CON>
+<EX>n_i &lt; n_Nummer</EX>
+</CON>
+<ST>
+<AS opAssign="Plus">
+<VN name="n_i" />
+<EX>1</EX>
+</AS>
+<AS>
+<VN name="s_Text" />
+<EX>sl_Listeneintraege[n_i]+" ("+sl_Relevanzauswahl[n_i]+")"</EX>
+</AS>
+<If>
+<CON>
+<EX>Sys::StringFind(s_Text, "unentbehrlich", 1) &gt; 0</EX>
+</CON>
+<Then>
+<C>
+<AS>
+<VN name="s_Position" />
+<EX>"1. "</EX>
+</AS>
+</C>
+<AS>
+<VN name="s_Text" />
+<EX>sl_Listeneintraege[n_i]</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Sortiert1</EX>
+<EX>s_Text</EX>
+</Call>
+</Then>
+<ElseIf>
+<CON>
+<EX>Sys::StringFind(s_Text, "sehr wichtig", 1) &gt; 0</EX>
+</CON>
+<C>
+<AS>
+<VN name="s_Position" />
+<EX>"2. "</EX>
+</AS>
+</C>
+<AS>
+<VN name="s_Text" />
+<EX>sl_Listeneintraege[n_i]</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Sortiert2</EX>
+<EX>s_Text</EX>
+</Call>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>Sys::StringFind(s_Text, "wichtig", 1) &gt; 0</EX>
+</CON>
+<C>
+<AS>
+<VN name="s_Position" />
+<EX>"3. "</EX>
+</AS>
+</C>
+<AS>
+<VN name="s_Text" />
+<EX>sl_Listeneintraege[n_i]</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Sortiert3</EX>
+<EX>s_Text</EX>
+</Call>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>Sys::StringFind(s_Text, "erwähnenswert", 1) &gt; 0</EX>
+</CON>
+<C>
+<AS>
+<VN name="s_Position" />
+<EX>"4. "</EX>
+</AS>
+</C>
+<AS>
+<VN name="s_Text" />
+<EX>sl_Listeneintraege[n_i]</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Sortiert4</EX>
+<EX>s_Text</EX>
+</Call>
+</ElseIf>
+</If>
+</ST>
+</While>
+<C>
+<CT>Liste sortieren</CT>
+</C>
+<C>
+<Call name="Sys::ListSort" des="" ov="No" preLoad="No">
+<EX>sl_Sortiert</EX>
+<EX>True</EX>
+</Call>
+</C>
+<C>
+<CT>Ausgabe: 1. Platz</CT>
+</C>
+<AS>
+<VN name="n_i" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::ListLength(sl_Sortiert1)</EX>
+</AS>
+<While>
+<CON>
+<EX>n_i &lt; n_Nummer</EX>
+</CON>
+<ST>
+<AS opAssign="Plus">
+<VN name="n_i" />
+<EX>1</EX>
+</AS>
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<VT ov="No" des="">
+<Nummerierung level="1" type="number-arabic" numexpand="0" begin="1" delimiter-between="." delimiter-end="." />
+<T static="Yes">
+<VN name="sl_Sortiert1">
+<Index>n_i</Index>
+</VN>
+</T>
+</VT>
+</P>
+</ST>
+</While>
+<C>
+<CT>Ausgabe: 2. Platz</CT>
+</C>
+<AS>
+<VN name="n_i" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::ListLength(sl_Sortiert2)</EX>
+</AS>
+<While>
+<CON>
+<EX>n_i &lt; n_Nummer</EX>
+</CON>
+<ST>
+<AS opAssign="Plus">
+<VN name="n_i" />
+<EX>1</EX>
+</AS>
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<VT ov="No" des="">
+<Nummerierung level="1" type="number-arabic" numexpand="0" begin="1" delimiter-between="." delimiter-end="." />
+<T static="Yes">
+<VN name="sl_Sortiert2">
+<Index>n_i</Index>
+</VN>
+</T>
+</VT>
+</P>
+</ST>
+</While>
+<C>
+<CT>Ausgabe: 3. Platz</CT>
+</C>
+<AS>
+<VN name="n_i" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::ListLength(sl_Sortiert3)</EX>
+</AS>
+<While>
+<CON>
+<EX>n_i &lt; n_Nummer</EX>
+</CON>
+<ST>
+<AS opAssign="Plus">
+<VN name="n_i" />
+<EX>1</EX>
+</AS>
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<VT ov="No" des="">
+<Nummerierung level="1" type="number-arabic" numexpand="0" begin="1" delimiter-between="." delimiter-end="." />
+<T static="Yes">
+<VN name="sl_Sortiert3">
+<Index>n_i</Index>
+</VN>
+</T>
+</VT>
+</P>
+</ST>
+</While>
+<C>
+<CT>Ausgabe: 3. Platz</CT>
+</C>
+<AS>
+<VN name="n_i" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::ListLength(sl_Sortiert4)</EX>
+</AS>
+<While>
+<CON>
+<EX>n_i &lt; n_Nummer</EX>
+</CON>
+<ST>
+<AS opAssign="Plus">
+<VN name="n_i" />
+<EX>1</EX>
+</AS>
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<VT ov="No" des="">
+<Nummerierung level="1" type="number-arabic" numexpand="0" begin="1" delimiter-between="." delimiter-end="." />
+<T static="Yes">
+<VN name="sl_Sortiert4">
+<Index>n_i</Index>
+</VN>
+</T>
+</VT>
+</P>
+</ST>
+</While>
+</Label>
+</Label>
+<AS>
+<VN name="n_Interpretation" />
+<EX>2</EX>
+</AS>
+</ST>
+</Form>

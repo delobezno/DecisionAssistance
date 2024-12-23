@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form name="formName" language="1.33" autostart="Yes" treeExpand="10" splitbarPos="" printer="Standard" printcount="1">
+<MetaList>
+<Meta name="fml_alsmodulverwendbar" value="j" />
+<Meta name="fml_toplevel" value="n" />
+<Meta name="fml_tsversion_erstellung" value="1610.2" />
+<Meta name="fml_kurzname" value="formName" />
+<Meta name="fml_datumimport_xml" value="7.8.17 10:18" />
+<Meta name="vlt_key_id" value="1" />
+<Meta name="fml_send_package_name" value="" />
+<Meta name="fml_tsversion" value="1610.2" />
+<Meta name="fml_tsversion_compatibility" value="1435.4" />
+</MetaList>
+<VariableDefList>
+<VD isList="Yes" type="String" name="sl_Geschlecht" pm="Yes" final="Yes">
+<ID></ID>
+<DV></DV>
+<DV>männlich</DV>
+<DV>weiblich</DV>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Alter">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Gewicht">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Groesse">
+<ID></ID>
+<Format>0.00</Format>
+<DN></DN>
+</VD>
+<VD type="Container" name="c_Original">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Container" name="c_Temp">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Maske">
+<ID></ID>
+<DV>Maske</DV>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_iGroesse">
+<ID></ID>
+<Format>0.00</Format>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_iGewicht">
+<ID></ID>
+<Format>#,##0</Format>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Gewicht">
+<ID></ID>
+<Format>#,##0</Format>
+<DN></DN>
+</VD>
+<VD isList="Yes" type="String" name="sl_Groesse">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_iAlter">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Alter">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="String" name="s_iAlter">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_iGroesse">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_iGewicht">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Ergebnis">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Geschlecht">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Ergebnis">
+<ID></ID>
+<Format>#,##0</Format>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Gewicht">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="Numeric" name="n_Nummer">
+<ID></ID>
+<Format>#0.######</Format>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Groesse">
+<ID></ID>
+<DN></DN>
+</VD>
+<VD type="String" name="s_Alter">
+<ID></ID>
+<DN></DN>
+</VD>
+</VariableDefList>
+<ST>
+<Label des="Eingabe" sl="No" ov="No">
+<ExtendedInput ddes="BMI-Rechner" ac="Formular" fontScaling="Yes" treeAction="Yes" treeActionDesc="Always">
+<DialogStructure width="300mm" height="200mm" showSystemPanel="No">
+<TabbedPane title="">
+<Panel id="pnl_Sex" gridX="0" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<LabelControl id="lbl_Geschlecht" gridX="1" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="" insetTop="3mm" insetLeft="5mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Geschlecht" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Geschlecht: " />
+<ComboBoxControl id="cbo_Geschlecht" gridX="2" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="Geschlecht auswählen" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Alter" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0">
+<ChangeListener name="OnChange" resultType="Void">
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Geschlecht"</EX>
+</Call>
+</ST>
+</ChangeListener>
+</ComboBoxControl>
+<BorderControl type="RAISED" color="#0" thickness="0" borderstyle="etched" />
+</Panel>
+<Panel id="pnl_Alter" gridX="0" gridY="1" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<LabelControl id="lbl_Alter" gridX="1" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="" insetTop="3mm" insetLeft="5mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Alter" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Alter: " />
+<ComboBoxControl id="cbo_Alter" gridX="2" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="Alter auswählen" insetTop="0mm" insetLeft="37mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Groesse" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0">
+<ChangeListener name="OnChange" resultType="Void">
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Alter"</EX>
+</Call>
+</ST>
+</ChangeListener>
+</ComboBoxControl>
+<BorderControl type="RAISED" color="#0" thickness="0" borderstyle="etched" />
+</Panel>
+<Panel id="pnl_Groesse" gridX="0" gridY="2" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<LabelControl id="lbl_Groesse" gridX="1" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="" insetTop="3mm" insetLeft="5mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Groesse" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Größe: " />
+<ComboBoxControl id="cbo_Groesse" gridX="2" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="Größe (in Meter) auswählen" insetTop="0mm" insetLeft="26mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Gewicht" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0">
+<ChangeListener name="OnChange" resultType="Void">
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Groesse"</EX>
+</Call>
+</ST>
+</ChangeListener>
+</ComboBoxControl>
+<BorderControl type="RAISED" color="#0" thickness="0" borderstyle="etched" />
+</Panel>
+<Panel id="pnl_Gewicht" gridX="0" gridY="3" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<LabelControl id="lbl_Gewicht" gridX="1" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="NONE" toolTipText="Gewicht in Kg eingeben" insetTop="3mm" insetLeft="5mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="cbo_Gewicht" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Gewicht: " />
+<ComboBoxControl id="cbo_Gewicht" gridX="2" gridY="0" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="NORTHWEST" fill="HORIZONTAL" toolTipText="Gewicht auswählen" insetTop="0mm" insetLeft="17mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="btn_Ok" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" maxLen="0">
+<ChangeListener name="OnChange" resultType="Void">
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Gewicht"</EX>
+</Call>
+</ST>
+</ChangeListener>
+</ComboBoxControl>
+<BorderControl type="RAISED" color="#0" thickness="0" borderstyle="etched" />
+</Panel>
+</TabbedPane>
+<SystemPanel id="pnlSys" gridX="0" gridY="0" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<Panel id="" gridX="0" gridY="1" gridWidth="1" gridHeight="1" weightX="1.0" weightY="1.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="0mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial">
+<ButtonControl id="btn_Ok" gridX="0" gridY="1" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="0mm" insetBottom="5mm" insetRight="0mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="btn_Abbrechen" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="OK" mnemonic="O">
+<OnClickListener name="OnClick" resultType="Void">
+<ParamDefList>
+<ParamDef type="Container" name="event" isRef="Yes" />
+</ParamDefList>
+<ST>
+<If>
+<CON>
+<EX>Sys::InputClose(3) == True</EX>
+</CON>
+<Then>
+<Call name="M_INPUT_OK2_I4597" des="" ov="No">
+<EX>c_Original</EX>
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+</Call>
+</Then>
+</If>
+</ST>
+</OnClickListener>
+</ButtonControl>
+<ButtonControl id="btn_Abbrechen" gridX="1" gridY="1" gridWidth="1" gridHeight="1" weightX="0.0" weightY="0.0" anchor="SOUTHEAST" fill="NONE" toolTipText="" insetTop="0mm" insetLeft="5mm" insetBottom="5mm" insetRight="5mm" ipadX="0mm" ipadY="0mm" nextFocusableComponent="none" minimumSizeHeight="0mm" minimumSizeWidth="0mm" maximumSizeHeight="0mm" maximumSizeWidth="0mm" preferredSizeHeight="0mm" preferredSizeWidth="0mm" foreground="#0" font-bold="No" font-italic="No" font-size="9" font-name="Arial" text="Abbrechen" mnemonic="A">
+<OnClickListener name="OnClick" resultType="Void">
+<ParamDefList>
+<ParamDef type="Container" name="event" isRef="Yes" />
+</ParamDefList>
+<ST>
+<Call name="M_INPUT_Abbrechen_I4599" des="" ov="No">
+<EX>c_Original</EX>
+<EX>c_Temp</EX>
+</Call>
+</ST>
+</OnClickListener>
+</ButtonControl>
+</Panel>
+</SystemPanel>
+</DialogStructure>
+<OnActivationListener name="OnActivation" resultType="Void">
+<ST>
+<If>
+<CON>
+<EX>M_INPUT_MaskeFuellen_I4578(c_Original, c_Temp, s_Maske) == False</EX>
+</CON>
+<Then>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Geschlecht"</EX>
+<EX>sl_Geschlecht</EX>
+</Call>
+<C>
+<CT>Altersliste füllen</CT>
+</C>
+<AS>
+<VN name="n_iAlter" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Alter" />
+<EX>138</EX>
+</AS>
+<While withoutMemory="Yes">
+<CON>
+<EX>n_iAlter &lt; n_Alter</EX>
+</CON>
+<ST>
+<If>
+<CON>
+<EX>n_iAlter == 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_iAlter" />
+<EX>""</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Alter</EX>
+<EX>s_iAlter</EX>
+</Call>
+</Then>
+<Else>
+<AS>
+<VN name="s_iAlter" />
+<EX>(String)n_iAlter+" Jahre"</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Alter</EX>
+<EX>s_iAlter</EX>
+</Call>
+</Else>
+</If>
+<AS opAssign="Plus">
+<VN name="n_iAlter" />
+<EX>1</EX>
+</AS>
+</ST>
+</While>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Alter"</EX>
+<EX>sl_Alter</EX>
+</Call>
+<C>
+<CT>Größenliste füllen</CT>
+</C>
+<AS>
+<VN name="n_iGroesse" />
+<EX>0.00</EX>
+</AS>
+<AS>
+<VN name="n_Groesse" />
+<EX>2.00</EX>
+</AS>
+<While withoutMemory="Yes">
+<CON>
+<EX>n_iGroesse &lt; n_Groesse</EX>
+</CON>
+<ST>
+<If>
+<CON>
+<EX>n_iGroesse == 0.00</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_iGroesse" />
+<EX>""</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Groesse</EX>
+<EX>s_iGroesse</EX>
+</Call>
+</Then>
+<Else>
+<AS>
+<VN name="s_iGroesse" />
+<EX>(String)n_iGroesse+" m"</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Groesse</EX>
+<EX>s_iGroesse</EX>
+</Call>
+</Else>
+</If>
+<AS opAssign="Plus">
+<VN name="n_iGroesse" />
+<EX>0.01</EX>
+</AS>
+</ST>
+</While>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Groesse"</EX>
+<EX>sl_Groesse</EX>
+</Call>
+<C>
+<CT>Gewichtsliste füllen</CT>
+</C>
+<AS>
+<VN name="n_iGewicht" />
+<EX>0</EX>
+</AS>
+<AS>
+<VN name="n_Gewicht" />
+<EX>200</EX>
+</AS>
+<While withoutMemory="Yes">
+<CON>
+<EX>n_iGewicht &lt; n_Gewicht</EX>
+</CON>
+<ST>
+<If>
+<CON>
+<EX>n_iGewicht == 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_iGewicht" />
+<EX>""</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Gewicht</EX>
+<EX>s_iGewicht</EX>
+</Call>
+</Then>
+<Else>
+<AS>
+<VN name="s_iGewicht" />
+<EX>(String)n_iGewicht+" Kg"</EX>
+</AS>
+<Call name="Sys::ListAppend" des="" ov="No" preLoad="No">
+<EX>sl_Gewicht</EX>
+<EX>s_iGewicht</EX>
+</Call>
+</Else>
+</If>
+<AS opAssign="Plus">
+<VN name="n_iGewicht" />
+<EX>1</EX>
+</AS>
+</ST>
+</While>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Gewicht"</EX>
+<EX>sl_Gewicht</EX>
+</Call>
+</Then>
+<Else>
+<AS>
+<VN name="s_Gewicht" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Gewicht")</EX>
+</AS>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Gewicht"</EX>
+<EX>s_Gewicht</EX>
+</Call>
+<AS>
+<VN name="s_Groesse" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Groesse")</EX>
+</AS>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Groesse"</EX>
+<EX>s_Groesse</EX>
+</Call>
+<AS>
+<VN name="s_Alter" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Alter")</EX>
+</AS>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Alter"</EX>
+<EX>s_Alter</EX>
+</Call>
+<AS>
+<VN name="s_Geschlecht" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Geschlecht")</EX>
+</AS>
+<Call name="Sys::InputSetValueList" des="" ov="No" preLoad="No">
+<EX>"cbo_Geschlecht"</EX>
+<EX>s_Geschlecht</EX>
+</Call>
+</Else>
+</If>
+</ST>
+</OnActivationListener>
+<CanCloseListener name="CanClose" resultType="Void">
+<ST>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Geschlecht"</EX>
+</Call>
+<If>
+<CON>
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "cbo_Geschlecht") == ""</EX>
+</CON>
+<Then>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"cbo_Geschlecht"</EX>
+</Call>
+<Return>
+<EX>"Bitte wählen Sie Ihr Geschlecht aus."</EX>
+</Return>
+</Then>
+</If>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Alter"</EX>
+</Call>
+<If>
+<CON>
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "cbo_Alter") == ""</EX>
+</CON>
+<Then>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"cbo_Alter"</EX>
+</Call>
+<Return>
+<EX>"Bitte wählen Sie Ihr Alter aus."</EX>
+</Return>
+</Then>
+</If>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Groesse"</EX>
+</Call>
+<If>
+<CON>
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "cbo_Groesse") == ""</EX>
+</CON>
+<Then>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"cbo_Groesse"</EX>
+</Call>
+<Return>
+<EX>"Bitte wählen Sie Ihre Körpergröße aus."</EX>
+</Return>
+</Then>
+</If>
+<Call name="M_INPUT_WertMerken_I4570" des="" ov="No" preLoad="No">
+<EX>c_Temp</EX>
+<EX>s_Maske</EX>
+<EX>"cbo_Gewicht"</EX>
+</Call>
+<If>
+<CON>
+<EX>M_INPUT_WertHolen_I4575(c_Temp, s_Maske, "cbo_Gewicht") == ""</EX>
+</CON>
+<Then>
+<Call name="Sys::InputSetFocus" des="" ov="No" preLoad="No">
+<EX>"cbo_Gewicht"</EX>
+</Call>
+<Return>
+<EX>"Bitte geben Sie Ihr Körpergewicht ein."</EX>
+</Return>
+</Then>
+</If>
+</ST>
+</CanCloseListener>
+</ExtendedInput>
+</Label>
+<Label des="Verarbeitung" sl="No" ov="No">
+<Label des="Gewicht" sl="No" ov="No">
+<AS>
+<VN name="s_Gewicht" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Gewicht")</EX>
+</AS>
+<If>
+<CON>
+<EX>Sys::StringFind(s_Gewicht, " Kg", 1) &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::StringRemove(s_Gewicht, " Kg")</EX>
+</AS>
+<If>
+<CON>
+<EX>n_Nummer &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Gewicht" />
+<EX>(Numeric)s_Gewicht</EX>
+</AS>
+</Then>
+</If>
+</Then>
+</If>
+</Label>
+<Label des="Größe" sl="No" ov="No">
+<AS>
+<VN name="s_Groesse" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Groesse")</EX>
+</AS>
+<If>
+<CON>
+<EX>Sys::StringFind(s_Groesse, " m", 1) &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::StringRemove(s_Groesse, " m")</EX>
+</AS>
+<If>
+<CON>
+<EX>n_Nummer &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Groesse" />
+<EX>(Numeric)s_Groesse</EX>
+</AS>
+</Then>
+</If>
+</Then>
+</If>
+</Label>
+<Label des="Alter" sl="No" ov="No">
+<AS>
+<VN name="s_Alter" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Alter")</EX>
+</AS>
+<If>
+<CON>
+<EX>Sys::StringFind(s_Alter, " Jahre", 1) &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Nummer" />
+<EX>Sys::StringRemove(s_Alter, " Jahre")</EX>
+</AS>
+<If>
+<CON>
+<EX>n_Nummer &gt; 0</EX>
+</CON>
+<Then>
+<AS>
+<VN name="n_Alter" />
+<EX>(Numeric)s_Alter</EX>
+</AS>
+</Then>
+</If>
+</Then>
+</If>
+</Label>
+<Label des="Geschlecht" sl="No" ov="No">
+<AS>
+<VN name="s_Geschlecht" />
+<EX>M_INPUT_WertHolen_I4575(c_Original, s_Maske, "cbo_Geschlecht")</EX>
+</AS>
+</Label>
+<Label des="Berechnung des Ergebnisses" sl="No" ov="No">
+<AS>
+<VN name="n_Ergebnis" />
+<EX>(n_Gewicht) / (n_Groesse * n_Groesse)</EX>
+</AS>
+</Label>
+<Label des="Zuordnung" sl="No" ov="No">
+<If>
+<CON>
+<EX>s_Geschlecht == "männlich"</EX>
+</CON>
+<Then>
+<If>
+<CON>
+<EX>n_Alter &lt; 18</EX>
+</CON>
+<Then>
+<If>
+<CON>
+<EX>n_Ergebnis &lt; 18.39</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Untergewicht"</EX>
+</AS>
+</Then>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 18.39 &amp;&amp; n_Ergebnis &lt; 19.64</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"unterer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 19.64 &amp;&amp; n_Ergebnis &lt; 23.36</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Normalgewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 23.36 &amp;&amp; n_Ergebnis &lt; 25.68</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"oberer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 25.68 &amp;&amp; n_Ergebnis &lt; 30</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Übergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 30 &amp;&amp; n_Ergebnis &lt; 35</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 1. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 35 &amp;&amp; n_Ergebnis &lt; 40</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 2. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 40.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 3. Grades"</EX>
+</AS>
+</ElseIf>
+</If>
+</Then>
+<Else>
+<If>
+<CON>
+<EX>n_Ergebnis &lt; 16</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"starkes Untergewicht"</EX>
+</AS>
+</Then>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 16 &amp;&amp; n_Ergebnis &lt; 17.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"mäßiges Untergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 17.00 &amp;&amp; n_Ergebnis &lt; 18.50</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Untergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 18.50 &amp;&amp; n_Ergebnis &lt; 25.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Normalgewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 25.00 &amp;&amp; n_Ergebnis &lt; 30.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"oberer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 30.00 &amp;&amp; n_Ergebnis &lt; 35.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Übergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 35.00 &amp;&amp; n_Ergebnis &lt; 40.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 1. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 40.00 &amp;&amp; n_Ergebnis &lt; 45.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 2. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 45.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 3. Grades"</EX>
+</AS>
+</ElseIf>
+</If>
+</Else>
+</If>
+</Then>
+<Else>
+<If>
+<CON>
+<EX>n_Alter &lt; 18</EX>
+</CON>
+<Then>
+<If>
+<CON>
+<EX>n_Ergebnis &lt; 18.39</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Untergewicht"</EX>
+</AS>
+</Then>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 18.39 &amp;&amp; n_Ergebnis &lt; 19.64</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"unterer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 19.64 &amp;&amp; n_Ergebnis &lt; 23.36</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Normalgewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 23.36 &amp;&amp; n_Ergebnis &lt; 25.68</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"oberer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 25.68 &amp;&amp; n_Ergebnis &lt; 30.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Übergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 30.00 &amp;&amp; n_Ergebnis &lt; 35.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Präadipositas"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 35 &amp;&amp; n_Ergebnis &lt; 40.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 1. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 40.00 &amp;&amp; n_Ergebnis &lt; 45.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 2. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 45.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 3. Grades"</EX>
+</AS>
+</ElseIf>
+</If>
+</Then>
+<Else>
+<If>
+<CON>
+<EX>n_Ergebnis &lt; 16</EX>
+</CON>
+<Then>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Untergewicht"</EX>
+</AS>
+</Then>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 16 &amp;&amp; n_Ergebnis &lt; 17.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"mäßiges Untergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 17.00 &amp;&amp; n_Ergebnis &lt; 18.50</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"leichtes Untergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 18.50 &amp;&amp; n_Ergebnis &lt; 25.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"unterer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 25.00 &amp;&amp; n_Ergebnis &lt; 30.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Normalgewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 30.00 &amp;&amp; n_Ergebnis &lt; 35.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"oberer Bereich des Normalgewichts"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 35.00 &amp;&amp; n_Ergebnis &lt; 40.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Übergewicht"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 40.00 &amp;&amp; n_Ergebnis &lt; 45</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Präadipositas"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 45.00 &amp;&amp; n_Ergebnis &lt; 50.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 1. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 50.00 &amp;&amp; n_Ergebnis &lt; 55.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 2. Grades"</EX>
+</AS>
+</ElseIf>
+<ElseIf>
+<CON>
+<EX>n_Ergebnis &gt;= 55.00</EX>
+</CON>
+<AS>
+<VN name="s_Ergebnis" />
+<EX>"Adipositas 3. Grades"</EX>
+</AS>
+</ElseIf>
+</If>
+</Else>
+</If>
+</Else>
+</If>
+</Label>
+</Label>
+<Label des="Ausgabe" sl="No" ov="No">
+<VT ov="No" des="">
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<T font-bold="Yes" font-underline="Yes" font-size="12" font-superscript="Yes" hy="Yes">
+<VL>Ergebnis:</VL>
+</T>
+</P>
+<P style="default" noBreak="No">
+<Num>
+<Adir>
+<FontAttrs />
+<ParAttrsN />
+</Adir>
+</Num>
+<T static="Yes" font-bold="Yes" font-italic="Yes" hy="Yes">
+<VN name="s_Ergebnis" />
+</T>
+</P>
+</VT>
+</Label>
+</ST>
+</Form>
